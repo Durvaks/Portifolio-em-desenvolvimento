@@ -1,0 +1,176 @@
+@font-face {
+    font-family: fixedsys;
+    src: url("Fixedsys.ttf");
+}
+html{
+    heigth: 100%;
+}
+body{
+    background-color: rgb(22, 22, 22);
+    background-size:cover;
+    background-repeat: no-repeat;    
+    background-attachment: fixed;
+    font-family: fixedsys;
+    color: white;
+}
+main{
+    width: 50%;
+    min-width: 400px;
+    margin: auto;
+}
+@media screen and (max-width: 665px) {
+    main{
+      width: 95%;
+    }
+  }
+  .section-about{
+    position: relative;
+    background-color: white;
+}
+.main-section{
+    text-align: center;
+    height: 100%;
+}
+.main-section p{
+    margin-top: 150px;
+    font-size: 20px;
+    color: rgb(0, 158, 21);
+    text-shadow: 3px 3px 3px black;
+}
+.main-section h1{
+    margin-top: 20px;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px black;
+}
+.main-section h2{
+    margin-top: 20px;
+    text-shadow: 3px 3px 3px black;
+}
+.read-more-button{
+    display: inline;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: white;
+    font-family: fixedsys;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px black;
+    border: 2px solid rgba(0, 0, 0, 0.644);
+}
+
+/*Design do menu toggle*/
+.row{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 15%;
+}
+@media screen and (max-width: 665px) {
+    .row{
+        left: 0;
+    }
+  }
+.top-bar{
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.836);
+    position: relative;
+}
+.menu-toggle{
+    width: 40px;
+    height: 50px;
+    float: left;
+}
+.menu-toggle:hover span, .menu-toggle:hover span::before, .menu-toggle:hover span::after {
+    background-color: rgb(141, 0, 0);
+}
+
+.menu-toggle span{
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #00ACCC;
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    transition: all .4s ease-in-out;
+}
+.menu-toggle span::before{
+    content: "";
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #00ACCC;
+    display: block;
+    position: absolute;
+    top: -6px;
+    transition: all .6s ease-in-out;
+}
+.menu-toggle span::after{
+    content: "";
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #00ACCC;
+    display: block;
+    position: absolute;
+    top: 6px;
+    transition: all .2s ease-in-out;
+}
+.logo{
+    float: left;
+    margin: 20px 0 0 20px;
+    position: relative;
+}
+.logo:hover a{
+    letter-spacing: 1px;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-family: fixedsys;
+    letter-spacing: 0px;
+    transition:all .8s ease;    
+}
+.main-nav-wrap{
+    display: none;
+    height: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0 20px 50px;
+    position: absolute;
+    top: 50px;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px;
+    transition: all .5s ease;    
+}
+.smoothscroll{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 30px;
+    color: white;
+    font-family: fixedsys;
+    transition: all .4s ease;
+}
+.smoothscroll:hover{
+    color: rgb(255, 0, 0);
+    padding-left: 10px;
+}
+.top-bar:hover .main-nav-wrap {
+    display: block;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+
+
+
+
