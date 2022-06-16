@@ -1,12 +1,12 @@
 @font-face {
     font-family: fixedsys;
-    src: url("Fixedsys.ttf");
+    src: url("fixedsys.tff.ttf");
 }
 body{
     background-size:cover;
     background-repeat: no-repeat;    
     background-attachment: fixed;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif, Arial;
     color: white;
 }
 main{
@@ -111,7 +111,7 @@ header{
     left: 0;
     width: 0;
     height: 7px;
-    background-color: red;
+    background-color: rgb(104, 0, 0);
     border-radius: 2px;
 }
 .level-bar span::after{
@@ -194,18 +194,34 @@ header{
     box-sizing: border-box;
 }
 .main-section p{    
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(0, 158, 21);
     text-shadow: 3px 3px 3px black;
 }
 .main-section h1{
     margin-top: 20px;
-    font-size: 50px;
+    font-size: 75px;
     text-shadow: 3px 3px 3px black;
 }
 .main-section h2{
     margin-top: 20px;
     text-shadow: 3px 3px 3px black;
+}
+@media screen and (max-width: 1200px) {
+    .main-section p{    
+        font-size: 20px;
+        color: rgb(0, 158, 21);
+        text-shadow: 3px 3px 3px black;
+    }
+    .main-section h1{
+        margin-top: 20px;
+        font-size: 50px;
+        text-shadow: 3px 3px 3px black;
+    }
+    .main-section h2{
+        margin-top: 20px;
+        text-shadow: 3px 3px 3px black;
+    }
 }
 .read-more-button{
     width: 200px;
@@ -217,7 +233,7 @@ header{
     margin-top: 20px;
     background-color: transparent;
     color: white;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif, Arial;
     font-size: 1em;
     text-shadow: 2px 2px 2px black;
     border: 2px solid rgba(173, 173, 173, 0.644);
@@ -225,28 +241,29 @@ header{
     transition: .5s;
 }
 .read-more-button:hover{
-    border-color: rgb(136, 0, 0);
+    border-color: #00ACCC;
+    backdrop-filter: blur(20px) saturate(159%);
+    -webkit-backdrop-filter: blur(20px) saturate(159%);
+    background-color: rgba(17, 25, 40, 0.7);
 }
-.links{
+.links{    
     position: absolute;
-    left: 10%;
+    left: 50%;
     bottom: 10%;
-    width: 30px;
+    margin-left: -50px;
 }
 .links .icon{
-    display: block;
+    display: inline-block;
     font-size: 30px;
     color: rgb(255, 255, 255);
     transition:all .3s ease;
-}
-.links .icon:nth-child(2){
-    margin-top: 10px;
+    margin-left: .5em;
 }
 .links .icon:hover{
     color: rgb(0, 255, 191);
 }
 
-/*Design do menu toggle*/
+/*Design do menu toogle*/
 .row{
     height: 60px;
     position: relative;
@@ -258,7 +275,7 @@ header{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.836);
     position: absolute;
-    left: 50%;
+    left: 30vh;
 }
 @media screen and (max-width: 665px) {
     .top-bar{
@@ -318,37 +335,32 @@ header{
 .logo a{
     text-decoration: none;
     color: white;
-    font-family: helvetica;
+    font-family: Helvetica, sans-serif, Arial;
     letter-spacing: 0px;
     transition:all .8s ease;    
-}
-.main-nav-wrap{
-    display: none;
-    height: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 20px 0 20px 50px;
-    position: absolute;
-    top: 50px;
-    box-sizing: border-box;
-    border-radius: 0 10px 10px;
-    transition: all .5s ease;    
 }
 .smoothscroll{
     display: block;
     text-decoration: none;
-    margin-bottom: 30px;
+    padding: 30px 0 0 30px;
     color: white;
-    font-family: helvetica;
-    transition: all .4s ease;
+    font-family: Helvetica, sans-serif, Arial;
+    transition: all .6s ease;
+}
+.main-navigation{
+    overflow: hidden;
+    height: 0;
+    transition: all .6s ease;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
 }
 .smoothscroll:hover{
     color: rgb(255, 0, 0);
-    padding-left: 10px;
+    margin-left: 10px;
 }
-.top-bar:hover .main-nav-wrap {
-    display: block;
+.top-bar:hover .main-nav-wrap .main-navigation{
     height: 300px;
     background-color: rgb(0, 0, 0);
-
 }
